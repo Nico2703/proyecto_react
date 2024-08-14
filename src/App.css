@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+#tiendaWidget{
+    margin: 0px 35px;
+    border-radius: 25%;
+    border: 3px solid #FFAD60;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#cartWidget{
+    margin: 0px 0px 0px 15px;
+    border-radius: 25%;
+    border: 3px solid #FFAD60;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#cartNumber{
+    margin: 0px 35px 0px 4px;
+    padding: 4px;
+    font-weight: 700;
+    background-color: white;
+    border-radius: 85%;
+    border: 3px solid #FFAD60;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#primerItem{
+    margin: 0px 20px 0px 730px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar{
+    /* background-color: #A02334; */
+    background: linear-gradient(to right,#A02334 20%, #FFAD60 30%,#A02334 100%);  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item{
+    margin: 0px 15px;
+}
+
+.navbar-brand{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 35px;
+    color: #FFAD60;
+}
+.navbar-brand h5{
+    font-weight: 100;
+}
+.navbar-brand:hover{
+    color: #96CEB4;
+}
+
+.nav-link{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color: #FFAD60;
+}
+.nav-link:hover{
+    color: #96CEB4
+}
+
+.itemsList{
+    background-color: #FFEEAD;
+    height: 80vh;
+}
+
+.footer{
+    background-color: #96CEB4;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textoFooter{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    color:  #A02334;
 }
