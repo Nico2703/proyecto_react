@@ -7,7 +7,7 @@ function App(){
     return (
         <>
             <NavBar/>
-            <ItemsListContainer/>
+            <ItemsListContainer infoHome = "Página en construcción." infoHome_2= "Próximamente encontrarás los mejores artículos del mundo baterístico."/>
             <Footer/>
         </>
     )                       

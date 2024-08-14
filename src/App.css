@@ -58,6 +58,14 @@
     background-color: #FFEEAD;
     height: 80vh;
 }
+.itemsList h4{
+    padding: 30px;
+    color:#96CEB4;
+}
+.itemsList h5{
+    padding: 0px 30px;
+    color:#96CEB4;
+}
 
 .footer{
     background-color: #96CEB4;
