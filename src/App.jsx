@@ -1,14 +1,30 @@
-import "./App.css"
-import { ItemsListContainer } from "./components/ItemsListContainer/ItemsListContainer";
-import { NavBar } from "./components/NavBar/NavBar";
-import { Footer } from "./components/Footer/Footer";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Nosotros from "./pages/Nosotros";
+import Contacto from "./pages/Contacto";
+import Productos from "./pages/Productos";
+import Error from "./pages/Error";
+import Layout from "./pages/Layout";
+import Carrito from "./pages/Carrito";
+import Detalle from "./pages/Detalle";
 
 function App(){
     return (
         <>
-            <NavBar/>
-            <ItemsListContainer infoHome = "Página en construcción." infoHome_2= "Próximamente encontrarás los mejores artículos del mundo baterístico."/>
-            <Footer/>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/home" element={<Layout/>}>
+                    <Route index element={<Home/>}/>  
+                    <Route path="productos" element={<Productos/>}/>                 
+                    <Route path="nosotros" element={<Nosotros/>}/>
+                    <Route path="contacto" element={<Contacto/>}/>
+                    <Route path="carrito" element={<Carrito/>}/>
+                    <Route path="productos/detalle" element={<Detalle/>}/>
+                    <Route path="*" element={<Error/>}/>
+                </Route>
+            </Routes>
+        </BrowserRouter>
         </>
     )                       
 }
