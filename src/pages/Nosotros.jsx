@@ -5,7 +5,7 @@ function Nosotros(){
     return(
         <main>
             <img style={style} src="https://i.pinimg.com/736x/7f/79/d3/7f79d321a1174f9449ef30318059f5b8.jpg" alt=""/>
-            <p className="nosotros"> 
+            <div className="nosotros"> 
                 <h3> Quiénes Somos </h3>
                 <h4> En BaDum, somos apasionados por la música y la magia que un buen ritmo puede crear. 
                     Fundado en 2008, nuestro objetivo ha sido siempre proporcionar a los bateristas y 
@@ -24,7 +24,7 @@ function Nosotros(){
                 <h4> Nuestro equipo está compuesto por músicos experimentados y entusiastas de la percusión que comprenden 
                     los desafíos y las alegrías de tocar batería. Estamos aquí para ayudarte a encontrar el instrumento perfecto, 
                     ofrecerte consejos técnicos, y asegurarnos de que tu experiencia con nosotros sea inolvidable!</h4>
-            </p>
+            </div>
         </main>
     )
 }

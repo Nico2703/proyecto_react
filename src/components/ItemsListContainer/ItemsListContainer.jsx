@@ -1,80 +1,81 @@
 import { Card } from "./components/Card/Card"
+import { productos } from "../../pages/Detalle";
 
 export const ItemsListContainer = () => {
     return <>
     <div className="itemsList">
         <Card 
-            imagenURL = 'https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA5dc776f91bb76.jpg'
-            nombre='Producto 1'
-            detalle='Detalle producto 1' 
-            precio='$...'
+            id = {productos[0].id}
+            imagenURL = {productos[0].imagenURL}
+            nombre = {productos[0].nombre}
+            precio = {productos[0].precio}
         ></Card>
         <Card
-            imagenURL = 'https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA5a3ba007a90f1.jpg'
-            nombre='Producto 2'
-            detalle='Detalle producto 2' 
-            precio='$...'
+            id = {productos[1].id}
+            imagenURL = {productos[1].imagenURL}
+            nombre = {productos[1].nombre}
+            precio = {productos[1].precio}
         ></Card>
         <Card
-            imagenURL = 'https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA621c133bf0bfc.jpg'
-            nombre='Producto 3'
-            detalle='Detalle producto 3' 
-            precio='$...'
+            id = {productos[2].id}
+            imagenURL = {productos[2].imagenURL}
+            nombre = {productos[2].nombre}
+            precio = {productos[2].precio}
         ></Card>
         <Card
-            imagenURL = 'https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA64bc2a0a4aeb5.jpeg'
-            nombre='Producto 4'
-            detalle='Detalle producto 4' 
-            precio='$...'
+            id = {productos[3].id}
+            imagenURL = {productos[3].imagenURL}
+            nombre = {productos[3].nombre}
+            precio = {productos[3].precio}
         ></Card>
         <Card
-            imagenURL = 'https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA59010d355751f.jpg'
-            nombre='Producto 5'
-            detalle='Detalle producto 5' 
-            precio='$...'
+            id = {productos[4].id}
+            imagenURL = {productos[4].imagenURL}
+            nombre = {productos[4].nombre}
+            precio = {productos[4].precio}
         ></Card>
         <Card
-            imagenURL = 'https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA56015f2c002b4.jpg'
-            nombre='Producto 6'
-            detalle='Detalle producto 6' 
-            precio='$...'
+            id = {productos[5].id}
+            imagenURL = {productos[5].imagenURL}
+            nombre = {productos[5].nombre}
+            precio = {productos[5].precio}
         ></Card>
         <Card
-            imagenURL = 'https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA61fc3c78bc8de.jpg'
-            nombre='Producto 7'
-            detalle='Detalle producto 7' 
-            precio='$...'
+            id = {productos[6].id}
+            imagenURL = {productos[6].imagenURL}
+            nombre = {productos[6].nombre}
+            precio = {productos[6].precio}
         ></Card>
         <Card
-            imagenURL = 'https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA563251de45382.jpg'
-            nombre='Producto 8'
-            detalle='Detalle producto 8' 
-            precio='$...'
+            id = {productos[7].id}
+            imagenURL = {productos[7].imagenURL}
+            nombre = {productos[7].nombre}
+            precio = {productos[7].precio}
         ></Card>
         <Card
-            imagenURL = 'https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA5ad4fc6f0bafb.jpg'
-            nombre='Producto 9'
-            detalle='Detalle producto 9' 
-            precio='$...'
+            id = {productos[8].id}
+            imagenURL = {productos[8].imagenURL}
+            nombre = {productos[8].nombre}
+            precio = {productos[8].precio}
         ></Card>
         <Card
-            imagenURL = 'https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA5627eefb0bbb4.jpg'
-            nombre='Producto 10'
-            detalle='Detalle producto 10' 
-            precio='$...'
+            id = {productos[9].id}
+            imagenURL = {productos[9].imagenURL}
+            nombre = {productos[9].nombre}
+            precio = {productos[9].precio}
         ></Card>
         <Card
-            imagenURL = 'https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA61fde35a3a643.jpg'
-            nombre='Producto 11'
-            detalle='Detalle producto 11' 
-            precio='$...'
+            id = {productos[10].id}
+            imagenURL = {productos[10].imagenURL}
+            nombre = {productos[10].nombre}
+            precio = {productos[10].precio}
         ></Card>
         <Card
-            imagenURL = 'https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA65f3273a2d195.jpg'
-            nombre='Producto 12'
-            detalle='Detalle producto 12' 
-            precio='$...'
+            id = {productos[11].id}
+            imagenURL = {productos[11].imagenURL}
+            nombre = {productos[11].nombre}
+            precio = {productos[11].precio}
         ></Card>
     </div>
     </>
-}
+};

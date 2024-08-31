@@ -4,15 +4,15 @@ function Contacto(){
         <main>
             <form>
                 <div className="mb-3">
-                    <label for="inputMail" className="form-label"> Dirección e-mail </label>
-                    <input type="email" class="form-control" id="inputMail" aria-describedby="emailHelp"/>
-                    <div id="emailHelp" class="form-text"> BaDum no compartirá la información en este formulario </div>
+                    <label htmlFor="inputMail" className="form-label"> Dirección e-mail </label>
+                    <input type="email" className="form-control" id="inputMail" aria-describedby="emailHelp"/>
+                    <div id="emailHelp" className="form-text"> BaDum no compartirá la información contenida en este formulario </div>
                 </div>
-                <div class="mb-3">
-                    <label for="inputTexto" class="form-label"> Mensaje </label>
-                    <textarea class="form-control" id="inputTexto" rows="6"></textarea>
+                <div className="mb-3">
+                    <label htmlFor="inputTexto" className="form-label"> Mensaje </label>
+                    <textarea className="form-control" id="inputTexto" rows="6"></textarea>
                 </div>
-                <button type="submit" class="btn"> Enviar </button>
+                <button type="submit" className="btn"> Enviar </button>
             </form>
         </main>
     )

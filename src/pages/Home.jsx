@@ -6,10 +6,9 @@ function Home(){
             <div>
                 <iframe style={style}
                     src="https://www.youtube.com/embed/7ZQnJSkPD3s" 
-                    title="Steve Gadd • Vinnie Colaiuta • Dave Weckl - 1989 Buddy Rich Memorial" 
-                    frameborder="1" 
+                    title="Steve Gadd • Vinnie Colaiuta • Dave Weckl - 1989 Buddy Rich Memorial"  
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin">
+                    referrerPolicy="strict-origin-when-cross-origin">
                 </iframe>
             </div>
         </main>

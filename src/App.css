@@ -88,7 +88,7 @@
 .card{
     margin: 0px 10px;
     width: 220px;
-    height: 320px;
+    height: 330px;
     display: flex;
     text-align: center;
     border: 4px solid #A02334;
@@ -142,4 +142,10 @@ h2{
 form{
     width: 40%;
     margin: 20px 0px;
+}
+
+#botonFinal{
+    width: 25%;
+    margin: 80px 5px;
+    align-self: center;
 }

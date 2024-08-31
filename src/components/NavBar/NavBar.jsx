@@ -2,7 +2,8 @@ import { CartWidget } from "./components/CartWidget"
 import { TiendaWidget } from "./components/TiendaWidget"
 import { Link } from "react-router-dom";
 
-export const NavBar = () =>{
+
+export const NavBar = ({cuenta}) =>{
     return <>
     <nav className="navbar navbar-expand-lg sticky-top">
         <div className="container-fluid">
@@ -14,29 +15,31 @@ export const NavBar = () =>{
             <div className="collapse navbar-collapse" id="navbarText">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li id="primerItem" className="nav-item">
-                        <Link to="/home/productos" className="nav-link">
+                        <Link to="/productos" className="nav-link">
                             Productos
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/home/nosotros" className="nav-link">
+                        <Link to="/nosotros" className="nav-link">
                             Nosotros
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/home/contacto" className="nav-link">
+                        <Link to="/contacto" className="nav-link">
                             Contacto
                         </Link>
                     </li>
                 </ul>
                 <span className="navbar-text">
-                    <Link to="/home/carrito">
-                       <CartWidget/>
+                    <Link to="/carrito">
+                        <CartWidget/>
                     </Link>
                 </span>
-                <p id="cartNumber">0</p>
+                <p id="cartNumber">{cuenta}</p>
             </div>
         </div>
     </nav>
     </>
 }
+
+// <p id="cartNumber">0</p>
