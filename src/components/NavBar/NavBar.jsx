@@ -1,9 +1,11 @@
 import { CartWidget } from "./components/CartWidget"
 import { TiendaWidget } from "./components/TiendaWidget"
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { cartContext } from "../../context/cartContext";
 
-
-export const NavBar = ({cuenta}) =>{
+export const NavBar = () =>{
+    const {cuenta} = useContext(cartContext);
     return <>
     <nav className="navbar navbar-expand-lg sticky-top">
         <div className="container-fluid">
@@ -41,5 +43,3 @@ export const NavBar = ({cuenta}) =>{
     </nav>
     </>
 }
-
-// <p id="cartNumber">0</p>

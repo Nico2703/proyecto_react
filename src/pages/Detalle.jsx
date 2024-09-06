@@ -2,7 +2,8 @@ import { CardDetalle } from "../components/ItemsListContainer/components/Card/Ca
 import { useParams } from "react-router-dom";
 import { productos } from "../../src/data.js";
 
-function Detalle({sumaCuenta, pedidoAgregar}){
+
+function Detalle(){
     const { id } = useParams();
     const producto = productos.find(p => p.id === parseInt(id));
     
@@ -13,12 +14,11 @@ function Detalle({sumaCuenta, pedidoAgregar}){
     return (
         <main>
             <CardDetalle 
+                id= {producto.id}
                 imagenURL = {producto.imagenURL}
                 nombre= {producto.nombre}
                 detalle= {producto.detalle}
                 precio= {producto.precio}
-                sumaCuenta = {sumaCuenta}
-                pedidoAgregar= {pedidoAgregar}
             ></CardDetalle>
         </main>
     );

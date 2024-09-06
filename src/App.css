@@ -146,6 +146,28 @@ form{
 
 #botonFinal{
     width: 25%;
-    margin: 80px 5px;
+    margin: 10px 0px;
+    align-self: center;
+}
+
+.botonQuitar{
+    background-color: #96CEB4;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.botonQuitar:hover{
+    background-color: #FFAD60;
+}
+
+.total{
+    color:#A02334;
+    font-weight: 700;
+    background-color: #96CEB4;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    width: 25%;
     align-self: center;
 }

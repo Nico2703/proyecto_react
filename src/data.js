@@ -1,3 +1,4 @@
+
 export const productos = [
     { id: 1, imagenURL:"https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA5dc776f91bb76.jpg", nombre: 'Sonor Aq2 / 14x6" - White Pearl', 
         detalle: 'Maple / Herrajes chrome plated  10 torres / Aros Superhoop 2.3', precio: '493,200' },
@@ -23,4 +24,12 @@ export const productos = [
         detalle: 'Beech 9 capas de 6mm / BD 20x14" - TN 12x8" - FT 14x12"', precio: '7,005,630' },
     { id: 12, imagenURL:"https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA65f3273a2d195.jpg" , nombre: 'Tama Starclassic / Red Oyster Wrap', 
         detalle: ' Birch Walnut / Red Oyster Wrap / 22x16 10x8 12x9 16x14 ', precio: '4,273,204' },
+    { id: 13, imagenURL:"https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA6137a0cb532d5.jpg" , nombre: 'Sonor AQX Jazz 18" / 4 cuerpos', 
+        detalle: ' Poplar / Blue Ocean Sparkle / 18x14 12x8 14x13 13x6 ', precio: '1,370,994' },
+    { id: 14, imagenURL:"https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA653019708ccc9.jpg" , nombre: 'Pearl Session Studio Select', 
+        detalle: ' Birch Mahogany / Gloss Barnwood Brown / 18x14 12x8 14x14', precio: '1,370,994' },
+    { id: 15, imagenURL:"https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA57f9cc8e1c2a6.jpg" , nombre: 'Pearl Sensitone 14x5" / Brass', 
+        detalle: ' Bronce Vintage / Aros SuperHoop II 2,3 mm / 10 torres ', precio: '1,381,571' },
+    { id: 16, imagenURL:"https://www.drumsonline.com.ar/contenido/thumbs/PRODUCTOGALERIA651dad9fcbefd.jpg" , nombre: 'Paiste Signature China 18"', 
+        detalle: ' Aleación B20/ Brillante / Heavy / Amplio rango de frecuencia ', precio: '803,239' }
 ];

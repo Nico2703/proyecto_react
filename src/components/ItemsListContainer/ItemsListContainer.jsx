@@ -6,7 +6,7 @@ export const ItemsListContainer = () => {
     <div className="itemsList">
         {productos.map((producto)=>{
                         return (
-                            <Card 
+                            <Card key={producto.id}
                             id = {producto.id}
                             imagenURL = {producto.imagenURL}
                             nombre = {producto.nombre}
