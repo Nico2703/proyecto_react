@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { cartContext } from "../../../../context/cartContext";
 
-
 export const CardDetalle = ({id, nombre, detalle, precio, imagenURL}) =>{
     const {sumaCuenta, pedidoAgregar} = useContext(cartContext);
 
@@ -24,17 +23,17 @@ export const CardDetalle = ({id, nombre, detalle, precio, imagenURL}) =>{
     const style_3 = {margin: '30px 0px 40px 0px', color:'#A02334'};
     const style_4 = {marginRight: '20px'};
     return (
-            <div className="card" style={style}>
-                <div className="card-body">
-                    <ImageProduct imagenURL={imagenURL}/>
-                    <h2> {nombre} </h2> 
-                    <h3 style={style_2}> {detalle} </h3>
-                    <h4 style={style_3}> ${precio} </h4>
-                    <Link to="/carrito" className="btn" style={style_4} onClick={()=> manejoAgregar()}> 
-                        Agregar a carrito
-                    </Link>
-                    <Link to="/productos" className="btn"> Volver </Link>
-                </div>
+        <div className="card" style={style}>
+            <div className="card-body">
+                <ImageProduct imagenURL={imagenURL}/>
+                <h2> {nombre} </h2> 
+                <h3 style={style_2}> {detalle} </h3>
+                <h4 style={style_3}> ${precio} </h4>
+                <Link to="/carrito" className="btn" style={style_4} onClick={()=> manejoAgregar()}> 
+                    Agregar a carrito
+                </Link>
+                <Link to="/productos" className="btn"> Volver </Link>
             </div>
-    );
+        </div>
+    )
 };

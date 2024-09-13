@@ -1,5 +1,4 @@
 
-
 function Nosotros(){
     const style = {margin: '20px'}
     return(

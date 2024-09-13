@@ -4,7 +4,7 @@ import { cartContext } from "../context/cartContext";
 
 function Carrito(){
     const {pedidos, pedidoQuitar, pedidosLimpiar} = useContext(cartContext);
-
+    
     let total = 0;
     pedidos.forEach(pedido => {
         total += parseInt(pedido.precio.replace(/,/g, '') * pedido.cantidad);
@@ -31,9 +31,19 @@ function Carrito(){
                         </li>
                     ))}
             </div>
-            <h4 className='total'>A pagar:  ${total}</h4>
-            <button id="botonFinal" className="btn" onClick={pedidosLimpiar}>Vaciar carrito</button>
-            <Link to="https://www.mercadopago.com.ar/" id="botonFinal" className="btn" target='blank'>Finalizar compra</Link>
+            {pedidos.length > 0 && (
+                <>
+                <h4 className='total'>A pagar:  ${total}</h4>
+                <button id="botonFinal" className="btn" onClick={pedidosLimpiar}>Vaciar carrito</button>
+                <Link to="https://www.mercadopago.com.ar/" id="botonFinal" className="btn" target='blank'>Finalizar compra</Link>
+                </>
+            )}
+            {pedidos.length === 0 && (
+                <>
+                <h4 className='total'>Carrito vacío</h4>
+                <Link to="/productos" id="botonFinal" className="btn">Ir a productos</Link>
+                </>
+            )}
         </div>
     )
 }
