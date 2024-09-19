@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { addDoc, collection, getFirestore } from "firebase/firestore"; 
 
 export const cartContext = createContext();
 
@@ -10,7 +11,7 @@ function Intermediario({children}){
     };
 
     const [pedidos, setPedidos] = useState([]);
-
+    
     const pedidoAgregar = (producto) => {
         setPedidos((pedidos) => {
             const buscar = pedidos.findIndex(p => p.id === producto.id);
@@ -46,8 +47,20 @@ function Intermediario({children}){
         setCuenta(0);
     };
 
+    const db = getFirestore();
+    const pedidosCollection = collection(db, "pedidos");
+    const pedidoFinal = async (nombre, email) => {
+        const pedidoCompleto = {
+            pedidos: pedidos,
+            date: new Date(),
+            comprador: {nombre, email}
+        }
+        await addDoc(pedidosCollection, pedidoCompleto);
+        pedidosLimpiar();
+    }
+
     return (
-        <cartContext.Provider value = {{cuenta, sumaCuenta, pedidos, pedidoAgregar, pedidoQuitar, pedidosLimpiar}}>
+        <cartContext.Provider value = {{cuenta, sumaCuenta, pedidos, pedidoAgregar, pedidoQuitar, pedidosLimpiar, pedidoFinal}}>
             {children}
         </cartContext.Provider>
     );

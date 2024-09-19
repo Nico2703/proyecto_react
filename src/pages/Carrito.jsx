@@ -1,10 +1,36 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { cartContext } from "../context/cartContext";
+import Swal from 'sweetalert2'
 
 function Carrito(){
-    const {pedidos, pedidoQuitar, pedidosLimpiar} = useContext(cartContext);
-    
+    const {pedidos, pedidoQuitar, pedidosLimpiar, pedidoFinal} = useContext(cartContext);
+    const navigate = useNavigate();
+
+    const manejoSubmit = async (event) => {
+        const esperaSwal = Swal.fire({
+            title: 'Procesando...',
+            text: 'Por favor, espera mientras procesamos tu pedido',
+            showConfirmButton: false,
+            didOpen: () => {
+                Swal.showLoading();
+            }
+        });
+        event.preventDefault(); 
+        const email = event.target.elements.inputMail.value;
+        const nombre = event.target.elements.inputNombre.value;
+        await pedidoFinal(email, nombre);
+        esperaSwal.close();
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Pedido confirmado!",
+            showConfirmButton: false,
+            timer: 4000
+        });
+        navigate('/home', { replace: true });
+    };
+
     let total = 0;
     pedidos.forEach(pedido => {
         total += parseInt(pedido.precio.replace(/,/g, '') * pedido.cantidad);
@@ -35,7 +61,13 @@ function Carrito(){
                 <>
                 <h4 className='total'>A pagar:  ${total}</h4>
                 <button id="botonFinal" className="btn" onClick={pedidosLimpiar}>Vaciar carrito</button>
-                <Link to="https://www.mercadopago.com.ar/" id="botonFinal" className="btn" target='blank'>Finalizar compra</Link>
+                <form id="botonFinal" style={{marginTop: '20px'}} onSubmit={manejoSubmit}>
+                <label className="form-label"> Nombre </label>
+                    <input type="nombre" className="form-control" id="inputNombre" required/>   
+                    <label className="form-label"> Dirección e-mail </label>
+                    <input type="email" className="form-control" id="inputMail" required/>
+                    <button style={{marginTop: '10px'}} className="btn" type='submit'>Finalizar pedido</button>
+                </form>
                 </>
             )}
             {pedidos.length === 0 && (
