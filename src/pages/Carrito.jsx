@@ -62,7 +62,7 @@ function Carrito(){
                 <h4 className='total'>A pagar:  ${total}</h4>
                 <button id="botonFinal" className="btn" onClick={pedidosLimpiar}>Vaciar carrito</button>
                 <form id="botonFinal" style={{marginTop: '20px'}} onSubmit={manejoSubmit}>
-                <label className="form-label"> Nombre </label>
+                    <label className="form-label"> Nombre </label>
                     <input type="nombre" className="form-control" id="inputNombre" required/>   
                     <label className="form-label"> Dirección e-mail </label>
                     <input type="email" className="form-control" id="inputMail" required/>

@@ -63,11 +63,11 @@ function Intermediario({children}){
 
     const db = getFirestore();
     const pedidosCollection = collection(db, "pedidos");
-    const pedidoFinal = async (nombre, email) => {
+    const pedidoFinal = async (email, nombre) => {
         const pedidoCompleto = {
             pedidos: pedidos,
             date: new Date(),
-            comprador: {nombre, email}
+            comprador: {email, nombre}
         }
         await addDoc(pedidosCollection, pedidoCompleto);
         
