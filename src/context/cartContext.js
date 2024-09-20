@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { addDoc, collection, getFirestore } from "firebase/firestore"; 
+import { updateDoc, doc } from "firebase/firestore";
 import Swal from 'sweetalert2'
 
 export const cartContext = createContext();
@@ -69,6 +70,12 @@ function Intermediario({children}){
             comprador: {nombre, email}
         }
         await addDoc(pedidosCollection, pedidoCompleto);
+        
+        for (const producto of pedidos) {
+            const orderDoc = doc(db, "productos", producto.id);
+            const nuevoStock = producto.stock - producto.cantidad;
+            await updateDoc(orderDoc, { stock: nuevoStock });
+        }
         pedidosLimpiar();
     }
 

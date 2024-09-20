@@ -57,6 +57,7 @@ export const ItemsListContainer = () => {
                                 imagenURL = {producto.imagenURL}
                                 nombre = {producto.nombre}
                                 precio = {producto.precio}
+                                stock = {producto.stock}
                                 ></Card>
                         )
                     })}
