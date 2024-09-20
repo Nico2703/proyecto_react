@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { addDoc, collection, getFirestore } from "firebase/firestore"; 
+import Swal from 'sweetalert2'
 
 export const cartContext = createContext();
 
@@ -15,10 +16,22 @@ function Intermediario({children}){
     const pedidoAgregar = (producto) => {
         setPedidos((pedidos) => {
             const buscar = pedidos.findIndex(p => p.id === producto.id);
-            if (buscar !== -1) {
+            if (buscar !== -1) { 
                 const actualizar = [...pedidos];
-                actualizar[buscar].cantidad += 1;
-                return actualizar;
+                if (producto.stock > actualizar[buscar].cantidad){
+                    actualizar[buscar].cantidad += 1;
+                    return actualizar;  
+                } else{
+                    Swal.fire({
+                        position: "center",
+                        icon: "error",
+                        title: "Sin stock disponible",
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                    setCuenta(cuenta);
+                    return actualizar;
+                }  
             }
             return [...pedidos, { ...producto, cantidad: 1 }];
         });

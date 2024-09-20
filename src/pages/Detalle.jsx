@@ -38,6 +38,7 @@ function Detalle(){
                 nombre= {producto.nombre}
                 detalle= {producto.detalle}
                 precio= {producto.precio}
+                stock={producto.stock}
             ></CardDetalle>
         </main>
         )}

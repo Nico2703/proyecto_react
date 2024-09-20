@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { cartContext } from "../../../../context/cartContext";
 
-export const CardDetalle = ({id, nombre, detalle, precio, imagenURL}) =>{
+export const CardDetalle = ({id, nombre, detalle, precio, imagenURL, stock}) =>{
     const {sumaCuenta, pedidoAgregar} = useContext(cartContext);
 
     const manejoAgregar = () => {
@@ -12,7 +12,8 @@ export const CardDetalle = ({id, nombre, detalle, precio, imagenURL}) =>{
             nombre: nombre,
             detalle: detalle,
             precio: precio,
-            imagenURL: imagenURL
+            imagenURL: imagenURL,
+            stock: stock
         };
         sumaCuenta();
         pedidoAgregar(producto);
